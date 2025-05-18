@@ -35,10 +35,6 @@ with arcpy.da.UpdateCursor(shapefile, ["Favorite"]) as cursor:
   
       cursor.updateRow(row)
 
-
-
-
-
 # ///////////////////////////// hands on 3 ///////////////////////////////
 
 arcpy.env.workspace = r"C:\Users\Lenovo\Desktop\gtest\Datasets"
@@ -51,27 +47,3 @@ output = r"C:\Users\Lenovo\Desktop\gtest\output"
 arcpy.MakeFeatureLayer_management(points, "Populated_layer" , """ "POP_MAX" < 10000 """)
 
 arcpy.analysis.SpatialJoin(countries,"Populated_layer" , output)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
