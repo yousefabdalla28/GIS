@@ -1,4 +1,4 @@
-# Feature List
+# 7.1SpatialJoin
 import arcpy
 
 arcpy.env.overwriteOutput = True
@@ -6,7 +6,8 @@ arcpy.env.workspace = r"C:\Users\Dell\OneDrive\Desktop\Practical\Data"
 
 points = r"C:\Users\Dell\OneDrive\Desktop\Practical\Data\ne_10m_populated_places.shp"
 countries = r"C:\Users\Dell\OneDrive\Desktop\Practical\Data\ne_10m_admin_0_countries.shp"
-output = r"C:\Users\Dell\OneDrive\Desktop\Practical\Outputs"
+output_spatial_join = r"C:\Users\Dell\OneDrive\Desktop\Practical\output_feature.shp"
 
-feature_list = arcpy.ListFeatureClasses()
-print (feature_list)
+arcpy.SpatialJoin_analysis(countries, points, output_spatial_join)
+
+print ("Done")
